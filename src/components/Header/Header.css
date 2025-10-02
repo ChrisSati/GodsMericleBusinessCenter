@@ -77,3 +77,41 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    height: 70vh; /* Reduce height on mobile */
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .header-content button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 40vh; /* Even smaller height for very small devices */
+  }
+
+  .header-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .header-content button {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+}

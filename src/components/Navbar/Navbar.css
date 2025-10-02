@@ -40,8 +40,8 @@
 }
 
 .nav-links li a:hover {
-  background: #ff6b6b;
-  color: #fff;
+  background: #ffd901;
+  color: #000000;
 }
 
 /* Cart/Login Button */
@@ -132,8 +132,8 @@
   }
 
   .nav-links-mobile li a:hover {
-    background: #ff6b6b;
-    color: #fff;
+    background: #fffb00;
+    color: #000000;
   }
 
   /* Cart/Login button in mobile menu */
