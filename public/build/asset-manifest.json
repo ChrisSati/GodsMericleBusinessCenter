@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.de711e18.css",
+    "main.js": "/static/js/main.bf03d1b3.js",
+    "static/js/977.e5fdec91.chunk.js": "/static/js/977.e5fdec91.chunk.js",
+    "static/js/455.533e773e.chunk.js": "/static/js/455.533e773e.chunk.js",
+    "static/js/453.e0bc1f6b.chunk.js": "/static/js/453.e0bc1f6b.chunk.js",
+    "static/media/seniorpatrick.jpg": "/static/media/seniorpatrick.95e89bb72b81cbe1feb6.jpg",
+    "static/media/daddymark.jpg": "/static/media/daddymark.367f52a9e1c524d40f76.jpg",
+    "static/media/shophands.jpg": "/static/media/shophands.61f599e04036bc7c0904.jpg",
+    "static/media/shipship.jpg": "/static/media/shipship.f271ae790bb4e388ba3f.jpg",
+    "static/media/ships.jpg": "/static/media/ships.ca7a89c999654765ab55.jpg",
+    "static/media/dashboard.jpg": "/static/media/dashboard.a119a8260799b09e0677.jpg",
+    "static/media/avarta.jpg": "/static/media/avarta.388a2354582befcc2733.jpg",
+    "index.html": "/index.html",
+    "main.de711e18.css.map": "/static/css/main.de711e18.css.map",
+    "main.bf03d1b3.js.map": "/static/js/main.bf03d1b3.js.map",
+    "977.e5fdec91.chunk.js.map": "/static/js/977.e5fdec91.chunk.js.map",
+    "455.533e773e.chunk.js.map": "/static/js/455.533e773e.chunk.js.map",
+    "453.e0bc1f6b.chunk.js.map": "/static/js/453.e0bc1f6b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de711e18.css",
+    "static/js/main.bf03d1b3.js"
+  ]
+}
