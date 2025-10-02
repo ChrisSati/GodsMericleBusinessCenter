@@ -1,0 +1,92 @@
+     <Box sx={{ mt: { xs: 8, sm: 10, md: 12 }, px: { xs: 2, sm: 3, md: 5 } }}>
+  <Grid container spacing={3} justifyContent="center">
+    {shops.map((shop, index) => (
+      <Grid item xs={12} sm={6} md={3} lg={3} key={index}>
+        <Box
+          key={index}
+          sx={{
+            position: "relative",
+            width: { xs: "100%", sm: 300, md: 320 },
+            height: { xs: 180, sm: 200, md: 220 },
+            borderRadius: 3,
+            overflow: "hidden",
+            cursor: "pointer",
+            boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
+            transition: "transform 0.3s, box-shadow 0.3s",
+            "&:hover": {
+              transform: "translateY(-8px)",
+              boxShadow: "0 12px 24px rgba(0,0,0,0.4)",
+            },
+            "&:before": {
+              content: '""',
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              height: "40%",
+              backgroundColor: "rgba(0,0,128,0.6)",
+              transition: "height 0.3s",
+            },
+            "&:hover:before": {
+              height: "100%",
+            },
+          }}
+        >
+          {/* Background Image */}
+          <Box
+            component="img"
+            src={shop.image}
+            alt={shop.name}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+
+          {/* Overlay */}
+          <Box
+            className="overlay"
+            sx={{
+              position: "absolute",
+              inset: 0,
+              color: "#fff",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-end", // default bottom
+              pb: 2,
+              px: 2,
+            }}
+          >
+            <Box
+              className="overlay-text"
+              sx={{
+                position: "absolute",
+                left: "50%",
+                top: "85%", // default near bottom
+                transform: "translate(-50%, -50%)",
+                textAlign: "center",
+                transition: "top 0.5s ease",
+                ".MuiTypography-root": { transition: "color 0.5s ease" },
+                // On hover, move text to center
+                ".overlay:hover &": {
+                  top: "50%",
+                },
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                sx={{ fontWeight: "bold", fontSize: "1rem" }}
+              >
+                 {shop.income}
+              </Typography>
+              <Typography variant="body2" sx={{ mt: 0.5, opacity: 0.9 }}>
+                Last Input: {shop.last}
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Grid>
+    ))}
+  </Grid>
+</Box>

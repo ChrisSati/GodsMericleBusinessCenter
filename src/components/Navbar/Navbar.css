@@ -1,0 +1,158 @@
+/* ------------------ General Navbar Styles ------------------ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 60px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Desktop Menu */
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 0.8rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.3rem 0.5rem;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Cart/Login Button */
+.cart-btn {
+  background: #3b2e00;
+  padding: 0.4rem 0.8rem;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.cart-btn:hover {
+  background: #5c4500;
+  color: #fff;
+}
+
+/* Hamburger Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ------------------ Mobile Styles ------------------ */
+.nav-links-mobile {
+  display: none; /* hide by default on desktop */
+}
+
+@media (max-width: 768px) {
+  /* Hide desktop menu on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger icon */
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  /* Mobile menu container */
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    overflow: hidden;
+    max-height: 0; /* hidden by default */
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  /* Open state for mobile menu */
+  .nav-links-mobile.open {
+    max-height: 500px; /* enough to show all items */
+  }
+
+  /* Mobile menu items */
+  .nav-links-mobile li {
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideFadeIn 0.4s forwards;
+  }
+
+  /* Staggered animation */
+  .nav-links-mobile.open li:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links-mobile.open li:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links-mobile.open li:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links-mobile.open li:nth-child(4) { animation-delay: 0.4s; }
+  .nav-links-mobile.open li:nth-child(5) { animation-delay: 0.5s; }
+
+  /* Style mobile links */
+  .nav-links-mobile li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+  }
+
+  .nav-links-mobile li a:hover {
+    background: #ff6b6b;
+    color: #fff;
+  }
+
+  /* Cart/Login button in mobile menu */
+  .nav-links-mobile li a.cart-btn {
+    background: #3b2e00;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+  }
+
+  .nav-links-mobile li a.cart-btn:hover {
+    background: #5c4500;
+    color: #fff;
+  }
+}
+
+/* ------------------ Animation Keyframes ------------------ */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
